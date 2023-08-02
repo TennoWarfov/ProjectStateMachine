@@ -45,4 +45,6 @@ public class SceneTransition : MonoBehaviour
         _animator.SetTrigger(_crossFadeStart);
         _sceneLoadOperation.completed -= CrossFadeStart;
     }
+
+    //TODO: надо придумать как можно будет измен€ть сцену с помощью этого скрипта не пользу€сь синглтоном
 }
