@@ -3,6 +3,9 @@ using UnityEngine;
 public class Bootstrap : MonoBehaviour
 {
     public StateMachine<Bootstrap> StateMachine { get; private set; }
+    public SceneTransition SceneTransition { get => _sceneTransitionPrefab; }
+
+    [SerializeField] private SceneTransition _sceneTransitionPrefab;
     
     private void Start()
     {
@@ -10,6 +13,8 @@ public class Bootstrap : MonoBehaviour
             new BootstrapState(this),
             new InitialState(this),
             new LoadingState(this));
+
+        Instantiate(_sceneTransitionPrefab);
 
         StateMachine.SwitchState<BootstrapState>();
     }

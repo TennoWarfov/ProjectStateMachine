@@ -13,7 +13,7 @@ public class InitialState : IState<Bootstrap>, IEnterable, IExitable, ITickable
 
     public void OnEnter()
     {
-        Debug.Log("State 2 Entered");
+        Initializer.SceneTransition.LoadScene("InitialScene");
     }
 
     public void OnExit()

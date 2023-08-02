@@ -11,7 +11,7 @@ public class LoadingState : IState<Bootstrap>, IEnterable, IExitable
 
     public void OnEnter()
     {
-        Debug.Log("State 3 Entered");
+        Initializer.SceneTransition.LoadScene("LoadingScene");
     }
 
     public void OnExit()
